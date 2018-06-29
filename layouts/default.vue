@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppNavigation />
+    <!--<AppNavigation />-->
     <nuxt/>
   </div>
 </template>
@@ -9,6 +9,11 @@
   import AppNavigation from '~/components/Appnavigation.vue'
 
   export default {
+    head () {
+      return {
+        titleTemplate: '%s | Nuxt Web Application'
+      }
+    },
     components: {
       AppNavigation
     }
