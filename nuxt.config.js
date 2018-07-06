@@ -33,7 +33,8 @@ module.exports = {
    */
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    // '@nuxtjs/pwa'
   ],
   axios: {
     prefix: '/api/v2'

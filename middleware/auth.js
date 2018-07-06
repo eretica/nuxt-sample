@@ -5,8 +5,16 @@ export default function ({req, route, redirect, store}) {
     return
   }
 
-  const cookies = new Cookie(req.headers.cookie)
-  const credential = cookies.get('credential')
+  let credential;
+  if (process.server) {
+      const cookies = new Cookie(req.headers.cookie)
+      credential = cookies.get('credential')
+  } else {
+    
+  }
+
+
+
 
   if (credential) {
 
