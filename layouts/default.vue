@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import AppNavigation from '~/components/Appnavigation.vue'
+  import AppNavigation from './../components/Appnavigation.vue'
 
   export default {
     head () {
