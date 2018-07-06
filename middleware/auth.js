@@ -1,20 +1,11 @@
 import Cookie from 'universal-cookie'
 
-export default function ({req, route, redirect, store}) {
+export default function ({req, route, redirect, store, app}) {
   if (!process.server || ['/login'].includes(route.path)) {
     return
   }
 
-  let credential;
-  if (process.server) {
-      const cookies = new Cookie(req.headers.cookie)
-      credential = cookies.get('credential')
-  } else {
-    
-  }
-
-
-
+  const credential = app.$cookies.get('credential')
 
   if (credential) {
 

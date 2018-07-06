@@ -35,6 +35,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     // '@nuxtjs/pwa'
+    ['cookie-universal-nuxt', {parseJSON: false}]
   ],
   axios: {
     prefix: '/api/v2'
